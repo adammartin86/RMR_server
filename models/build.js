@@ -19,6 +19,10 @@ module.exports = (sequelize, DataTypes) => {
         case: {
             type: DataTypes.STRING,
             allowNull: false,
+        },
+        owner: {
+            type: DataTypes.STRING,
+            allowNull: false,
         }
     });
     return Build;

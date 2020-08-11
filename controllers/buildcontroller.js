@@ -43,7 +43,7 @@ router.put("/update/:id", validateSession, function (req, res) {
         owner: req.user.id,
     };
 
-    const query = { where: { id: req.params.entryId, owner: req.user.id } };
+    const query = { where: { id: req.params.id, owner: req.user.id } };
 
     Build.update(updateBuild, query)
         .then((build) => res.status(200).json(build))
@@ -51,7 +51,7 @@ router.put("/update/:id", validateSession, function (req, res) {
 });
 
 router.delete("/delete/:id", validateSession, function (req, res) {
-    const query = { where: { id: req.params.id, owner: req.user.id } };
+    const query = { where: { id: req.params.id, owner: req.user.id.toString() } };
     
     Build.destroy(query)
     .then(() => res.status(200).json({ message: "Build removed"}))
