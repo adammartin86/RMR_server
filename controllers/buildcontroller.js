@@ -25,7 +25,7 @@ router.get("/", (req, res) => {
 });
 
 router.get("/mine", validateSession, (req, res) => {
-    let userid = req.user.id;
+    let userid = req.user.id.toString();
     Build.findAll({
         where: { owner: userid },
     })
