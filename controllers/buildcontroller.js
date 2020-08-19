@@ -10,7 +10,7 @@ router.post("/create", validateSession, (req, res) => {
         cpu: req.body.build.cpu,
         gpu: req.body.build.gpu,
         ram: req.body.build.ram,
-        case: req.body.build.case,
+        pc_case: req.body.build.pc_case,
         owner: req.user.id,
     };
     Build.create(buildEntry)
@@ -39,7 +39,7 @@ router.put("/update/:id", validateSession, function (req, res) {
         cpu: req.body.build.cpu,
         gpu: req.body.build.gpu,
         ram: req.body.build.ram,
-        case: req.body.build.case,
+        pc_case: req.body.build.pc_case,
         owner: req.user.id,
     };
 

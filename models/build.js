@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        case: {
+        pc_case: {
             type: DataTypes.STRING,
             allowNull: false,
         },
