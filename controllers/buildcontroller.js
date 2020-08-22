@@ -11,6 +11,7 @@ router.post("/create", validateSession, (req, res) => {
         gpu: req.body.build.gpu,
         ram: req.body.build.ram,
         pc_case: req.body.build.pc_case,
+        url: req.body.build.url,
         owner: req.user.id,
     };
     Build.create(buildEntry)
@@ -40,6 +41,7 @@ router.put("/update/:id", validateSession, function (req, res) {
         gpu: req.body.build.gpu,
         ram: req.body.build.ram,
         pc_case: req.body.build.pc_case,
+        url: req.body.build.url,
         owner: req.user.id,
     };
 

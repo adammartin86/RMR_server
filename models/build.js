@@ -23,6 +23,10 @@ module.exports = (sequelize, DataTypes) => {
         owner: {
             type: DataTypes.STRING,
             allowNull: false,
+        },
+        url: {
+            type: DataTypes.STRING,
+            allowNull: false,
         }
     });
     return Build;
