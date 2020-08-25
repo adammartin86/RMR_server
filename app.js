@@ -18,6 +18,6 @@ app.use("/user", user);
 app.use("/build", build);
 
 
-app.listen(3000, function () {
+app.listen(process.env.PORT, function () {
     console.log("App is listening on port 3000.")
 });
